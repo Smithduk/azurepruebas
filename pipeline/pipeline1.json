@@ -51,25 +51,42 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"source": {
+									"type": "AzureSqlSource",
+									"queryTimeout": "02:00:00",
+									"partitionOption": "None"
+								},
 								"enableStaging": false
-							}
+							},
+							"inputs": [
+								{
+									"referenceName": "AzureSqlTable1",
+									"type": "DatasetReference",
+									"parameters": {
+										"URL_key_value": {
+											"value": "https://kv-clavespruebas.vault.azure.net/",
+											"type": "Expression"
+										},
+										"schema": {
+											"value": "@item().schema",
+											"type": "Expression"
+										}
+									}
+								}
+							]
 						}
 					]
 				}
 			}
 		],
 		"parameters": {
-			"Schema1": {
-				"type": "array",
-				"defaultValue": [
-					"finance"
-				]
+			"schema": {
+				"type": "string",
+				"defaultValue": "finance"
 			},
 			"Schema2": {
-				"type": "array",
-				"defaultValue": [
-					"dbo"
-				]
+				"type": "string",
+				"defaultValue": "dbo"
 			}
 		},
 		"variables": {
