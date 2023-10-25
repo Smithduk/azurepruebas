@@ -9,10 +9,10 @@
 			"URL_key_value": {
 				"type": "string"
 			},
-			"Schema2": {
+			"schema2": {
 				"type": "string"
 			},
-			"Table": {
+			"table": {
 				"type": "string"
 			}
 		},
@@ -21,11 +21,11 @@
 		"schema": [],
 		"typeProperties": {
 			"schema": {
-				"value": "@dataset().Schema2",
+				"value": "@dataset().schema2",
 				"type": "Expression"
 			},
 			"table": {
-				"value": "@dataset().Table",
+				"value": "@dataset().table",
 				"type": "Expression"
 			}
 		}
