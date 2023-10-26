@@ -49,14 +49,38 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": [],
+							"userProperties": [
+								{
+									"name": "source",
+									"value": "@{item().schema}.@{item().table}"
+								},
+								{
+									"name": "destination",
+									"value": "@{item().schema2}.@{item().table}"
+								}
+							],
 							"typeProperties": {
 								"source": {
 									"type": "AzureSqlSource",
 									"queryTimeout": "02:00:00",
 									"partitionOption": "None"
 								},
-								"enableStaging": false
+								"sink": {
+									"type": "AzureSqlSink",
+									"writeBehavior": "insert",
+									"sqlWriterUseTableLock": false,
+									"tableOption": "autoCreate",
+									"disableMetricsCollection": false
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
 							},
 							"inputs": [
 								{
@@ -69,6 +93,26 @@
 										},
 										"schema": {
 											"value": "@item().schema",
+											"type": "Expression"
+										},
+										"table": {
+											"value": "@item().table",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "AzureSqlTable2",
+									"type": "DatasetReference",
+									"parameters": {
+										"URL_key_value": {
+											"value": "https://kv-clavespruebas.vault.azure.net/",
+											"type": "Expression"
+										},
+										"schema2": {
+											"value": "@item().schema2",
 											"type": "Expression"
 										},
 										"table": {
