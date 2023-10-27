@@ -1,5 +1,5 @@
 {
-	"name": "LogisticsAddressCountryRegionStaging",
+	"name": "UFTProjInvoiceJourStaging",
 	"properties": {
 		"activities": [
 			{
@@ -14,7 +14,7 @@
 				"typeProperties": {
 					"variableName": "tabla",
 					"value": {
-						"value": "@json('[\n\n{\n      \"schema\": \"dbo\",    \n        \"schema2\": \"dbt\",     \n        \"tabla\":\"LogisticsAddressCountryRegionStaging\" ,   \n        \"pk_integracion\": \"COUNTRYREGION\"\n        },\n        ]')",
+						"value": "@json('[\n\n{\n      \"schema\": \"dbo\",    \n        \"schema2\": \"dbt\",     \n        \"tabla\":\"UFTProjInvoiceJourStaging\" ,   \n        \"pk_integracion\": \"DATAAREAID\"\n        },\n        ]')",
 						"type": "Expression"
 					}
 				}
@@ -62,7 +62,7 @@
 									"upsertSettings": {
 										"useTempDB": true,
 										"keys": [
-											"COUNTRYREGION"
+											"DATAAREAID"
 										]
 									},
 									"sqlWriterUseTableLock": false,
