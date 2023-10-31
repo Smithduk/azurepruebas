@@ -1,6 +1,14 @@
 {
 	"name": "AzureSqlDatabase3",
 	"properties": {
+		"parameters": {
+			"urlKeyVault": {
+				"type": "string"
+			},
+			"secretNameKeyVault": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
