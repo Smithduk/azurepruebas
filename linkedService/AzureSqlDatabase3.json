@@ -3,12 +3,10 @@
 	"properties": {
 		"parameters": {
 			"urlKeyVault": {
-				"type": "string",
-				"defaultValue": "https://kv-clavespruebas.vault.azure.net/"
+				"type": "string"
 			},
 			"secretNameKeyVault": {
-				"type": "string",
-				"defaultValue": "DatabaseConnectiondatabase1"
+				"type": "string"
 			}
 		},
 		"annotations": [],
