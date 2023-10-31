@@ -1,0 +1,46 @@
+{
+	"name": "AzureSqlTable3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase3",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"urlKeyVault": {
+					"value": "@dataset().urlKeyVault",
+					"type": "Expression"
+				},
+				"secretNameKeyVault": {
+					"value": "@dataset().secretNameKeyVault",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"schema": {
+				"type": "string"
+			},
+			"table": {
+				"type": "string"
+			},
+			"urlKeyVault": {
+				"type": "string"
+			},
+			"secretNameKeyVault": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().schema",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().table",
+				"type": "Expression"
+			}
+		}
+	}
+}
