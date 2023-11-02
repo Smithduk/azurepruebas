@@ -19,14 +19,8 @@
 						"referenceName": "BinarioDataSourceFolder",
 						"type": "DatasetReference",
 						"parameters": {
-							"contenedor": {
-								"value": "@pipeline().parameters.SourceStore_Location",
-								"type": "Expression"
-							},
-							"directorio": {
-								"value": "@pipeline().parameters.SourceStore_Directory",
-								"type": "Expression"
-							}
+							"contenedor": "https://stcontenedor.blob.core.windows.net/ejercicio3",
+							"directorio": "https://stcontenedor.blob.core.windows.net/ejercicio3"
 						}
 					},
 					"fieldList": [
@@ -208,7 +202,7 @@
 		"parameters": {
 			"SourceStore_Location": {
 				"type": "string",
-				"defaultValue": "https://stcontenedor.blob.core.windows.net/ejercicio3/Creacion.xlsb"
+				"defaultValue": "https://stcontenedor.blob.core.windows.net/ejercicio3"
 			},
 			"SourceStore_Directory": {
 				"type": "string",
