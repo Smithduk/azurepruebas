@@ -19,7 +19,7 @@
 						"referenceName": "BinarioDataSourceFolder",
 						"type": "DatasetReference",
 						"parameters": {
-							"contenedor": "https://stcontenedor.blob.core.windows.net/ejercicio3",
+							"contenedor": "https://stcontenedor.blob.core.windows.net/ejercicio3/Creacion.xlsb",
 							"directorio": "https://stcontenedor.blob.core.windows.net/ejercicio3"
 						}
 					},
