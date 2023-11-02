@@ -75,8 +75,7 @@
 						"value": "@activity('FilterFiles').output.value",
 						"type": "Expression"
 					},
-					"isSequential": false,
-					"batchCount": 0,
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "File",
