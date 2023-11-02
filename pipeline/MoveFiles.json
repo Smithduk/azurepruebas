@@ -19,12 +19,12 @@
 						"referenceName": "BinarioDataSourceFolder",
 						"type": "DatasetReference",
 						"parameters": {
-							"contenedor": "https://stcontenedor.blob.core.windows.net/ejercicio3/Creacion.xlsb",
-							"directorio": "https://stcontenedor.blob.core.windows.net/ejercicio3"
+							"contenedor": "https://stcontenedor.blob.core.windows.net/ejercicio3a/Creacion.xlsb",
+							"directorio": "https://stcontenedor.blob.core.windows.net/ejercicio3a"
 						}
 					},
 					"fieldList": [
-						"exists"
+						"childItems"
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
@@ -49,7 +49,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('GetFileList').output.exists",
+						"value": "@activity('GetFileList').output.childItems",
 						"type": "Expression"
 					},
 					"condition": {
@@ -114,11 +114,11 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"contenedor": {
-											"value": "https://stcontenedor.blob.core.windows.net/ejercicio3",
+											"value": "https://stcontenedor.blob.core.windows.net/ejercicio3a",
 											"type": "Expression"
 										},
 										"directorio": {
-											"value": "https://stcontenedor.blob.core.windows.net/ejercicio3/Creacion.xlsb",
+											"value": "https://stcontenedor.blob.core.windows.net/ejercicio3a/Creacion.xlsb",
 											"type": "Expression"
 										},
 										"filename": {
